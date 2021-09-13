@@ -39,7 +39,7 @@ SMTP_TRANSPORT_URL=
 - Realizaremos a subida do banco:
  ```
  npm run postgres:start
- npm run database create
+ npm run database:create
  ```
 
 - Após isso já é possível rodarmos o projeto através do:
@@ -53,3 +53,18 @@ npm run dev
 ---
 
 [...] WIP
+
+## Routes
+---
+
+| Route           	| Method 	| Action                                                            	| Request Body        	| Response  	|
+|-----------------	|--------	|-------------------------------------------------------------------	|---------------------	|-----------	|
+| /academicDegree 	| GET    	| Obtain all Academic Degrees from database                         	|                     	|           	|
+| /career         	| GET    	| Obtain all Careers from database                                  	|                     	|           	|
+| /level          	| GET    	| Obtain all Levels from database                                   	|                     	|           	|
+| /nationality    	| GET    	| Obtain all nationalities from database                            	|                     	|           	|
+| /roles          	| GET    	| Obtain all roles from database                                    	|                     	|           	|
+| /users          	| POST   	| Create an user                                                    	| UserInput           	| { id }    	|
+| /login          	| POST   	| Login at the application                                          	| { email, password } 	| { token } 	|
+| /field          	| POST   	| Create a Field for use at the Formulary                           	| { text }            	|           	|
+| /activity       	| POST   	| Create an Activity associated to a Field for use at the Formulary 	| { text, fieldId }   	|           	|
